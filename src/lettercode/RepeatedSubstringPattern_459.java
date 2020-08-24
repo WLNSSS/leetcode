@@ -2,16 +2,22 @@ package lettercode;
 
 public class RepeatedSubstringPattern_459 {
 	public boolean repeatedSubstringPattern(String s) {
-		boolean flag = false;
-		int rangeLen = s.length() / 2 + 1;
-		for(int i = 0;i < rangeLen;i++) {
-			String[] tempStr = s.split(s.substring(0,i));
-			if(tempStr.length == 0) {
-				flag = true;
-				break;
-			}
-		}
-		return flag;
+        int n = s.length();
+        for (int i = 1; i * 2 <= n; ++i) {
+            if (n % i == 0) {
+                boolean match = true;
+                for (int j = i; j < n; ++j) {
+                    if (s.charAt(j) != s.charAt(j - i)) {
+                        match = false;
+                        break;
+                    }
+                }
+                if (match) {
+                    return true;
+                }
+            }
+        }
+        return false;
     }
 	
 	public static void main(String[] args) {
