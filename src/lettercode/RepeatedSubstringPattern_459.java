@@ -3,6 +3,7 @@ package lettercode;
 public class RepeatedSubstringPattern_459 {
 	public boolean repeatedSubstringPattern(String s) {
         int n = s.length();
+        
         for (int i = 1; i * 2 <= n; ++i) {
             if (n % i == 0) {
                 boolean match = true;
