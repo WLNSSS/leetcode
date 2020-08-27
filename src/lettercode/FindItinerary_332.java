@@ -31,6 +31,7 @@ public class FindItinerary_332 {
 			index++;
 			newTickets.add(tempList);
 		}
+		
 		newTickets.remove(resultIndex);
 		if(toS.equals("aaa"))
 			return false;
