@@ -34,6 +34,16 @@ public class SortArray_912 {
 			}
 		}
 	}
+	
+	private void ShellSort(int[] nums) {
+		int numsLength = nums.length;
+		for(int footLen = numsLength / 2; footLen != 0;footLen /= 2) {
+			int stopIndex = numsLength / footLen;
+			for(int i = 0;i < stopIndex;i++) {
+				
+			}
+		}
+	}
 
 	public static void main(String[] args) {
 		int[] nums = {5,2,3,1};
