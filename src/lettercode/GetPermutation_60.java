@@ -27,7 +27,7 @@ public class GetPermutation_60 {
 			List<Integer> newResult = new ArrayList<Integer>(result);
 			newResult.add(nums[i]);
 			newNumsFlag[i] = true;
-			dfs(nums,newNumsFlag,newResult);
+			dfs(nums,newNumsFlag,newResult); 
 		}
 	}
 
