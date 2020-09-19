@@ -21,7 +21,8 @@ public class Test {
 		list1.add(1);
 		HashSet<List<Integer>> hs = new HashSet<List<Integer>>();
 		hs.add(list);
-		System.out.println(hs.contains(list));
+		hs.add(list1);
+		System.out.println(hs.contains(list1));
 	}
 
 }
