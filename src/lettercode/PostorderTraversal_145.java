@@ -26,6 +26,7 @@ public class PostorderTraversal_145 {
 		if(root.right != null)
 			solution(root.right,result);
 		result.add(root.val);
+		
 	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
