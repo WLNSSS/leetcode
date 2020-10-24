@@ -6,7 +6,7 @@ public class IsLongPressedName_925 {
 			if(typed.charAt(i) != name.charAt(j) && typed.charAt(i) == name.charAt(j - 1)) {
 				
 			}else if(typed.charAt(i) == name.charAt(j)) {
-				if(j + 1 != typed.length())
+				if(j + 1 != name.length())
 					j++;
 			}else {
 				return false;
