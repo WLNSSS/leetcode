@@ -16,5 +16,6 @@ public class SmallerNumbersThanCurrent_1365 {
             ret[i] = cnt;
         }
         return ret;
+        
     }
 }
