@@ -17,6 +17,7 @@ public class SortByBits_1356 {
 					arr[j - 1] = num;
 				}
 			}
+			
 		}
 		return arr;
     }
