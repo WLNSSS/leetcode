@@ -1,5 +1,9 @@
 package javabase;
 
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.lang.reflect.Constructor;
 
 public class Test {
@@ -23,9 +27,20 @@ public class Test {
 	    public Test() {
 	    }
 	    public static void main(String[] args) {
-			Test t = new Test();
-			Class c = t.getClass();
-			Constructor[] constructors;
-			constructors = c.getDeclaredConstructors();
-		}
+	        try (//创建一个ObjectOutputStream输出流
+	             ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("object.txt"))) {
+	            //将对象序列化到文件s
+	            Person person = new Person("9龙", 23);
+	            oos.writeObject(person);
+	        } catch (Exception e) {
+	            e.printStackTrace();
+	        }
+	        try (//创建一个ObjectInputStream输入流
+	                ObjectInputStream ois = new ObjectInputStream(new FileInputStream("person.txt"))) {
+	               Person brady = (Person) ois.readObject();
+	               System.out.println(brady);
+	           } catch (Exception e) {
+	               e.printStackTrace();
+	           }
+	    }
 }
